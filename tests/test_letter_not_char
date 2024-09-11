@@ -1,0 +1,9 @@
+from main import count_a_letter
+import pytest
+
+def test_letter_not_char():
+    letter = 3
+    sentence = 'I have a banana'
+
+    with pytest.raises(AttributeError):
+        count_a_letter(sentence, letter)
